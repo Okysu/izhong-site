@@ -1,0 +1,8 @@
+.masonry {
+  column-gap: 1em;
+}
+
+.item {
+  break-inside: avoid;
+  margin-bottom: 1em;
+}
