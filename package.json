@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nextui-org/button": "2.0.18",
+    "@nextui-org/card": "^2.0.22",
     "@nextui-org/code": "2.0.16",
     "@nextui-org/image": "^2.0.22",
     "@nextui-org/input": "2.1.6",

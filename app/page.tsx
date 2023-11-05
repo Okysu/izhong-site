@@ -56,9 +56,19 @@ export default function Home() {
           </div>
 
           <div className="mt-8 z-10">
-            <Snippet hideSymbol hideCopyButton variant="flat">
-              <span>
-                页面上次更新 <Code color="primary">2023年11月4日</Code>
+            <Snippet
+              style={{
+                maxWidth: "300px",
+              }}
+              hideSymbol
+              hideCopyButton
+              variant="flat"
+              className="text-center"
+            >
+              <span style={{ whiteSpace: "pre-wrap" }} className="text-white">
+                在一个人下定决心做某件事的那一瞬间，上苍也开始行动了。制造各式各样对其有利的意外事件、偶遇及物质援助，这是连他本人都意想不到的。
+                <br />
+                <Code color="primary">菲尔·施图茨《自愈》</Code>
               </span>
             </Snippet>
           </div>

@@ -39,11 +39,10 @@ export default function RootLayout({
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <main className="container mx-auto flex-grow">{children}</main>
-            <footer className="w-full flex items-center justify-center py-3">
+            <footer className="w-full flex items-center justify-center py-3 z-10">
               <div className="flex items-center gap-1 text-current">
-                <span className="text-default-600">本站由</span>
-                <p className="text-primary">Microsoft Azure</p>
-                <span className="text-default-600">提供云计算服务</span>
+                <span className="text-default-600">Powered by</span>
+                <p className="text-primary">ZCY.zone</p>
               </div>
             </footer>
           </div>
