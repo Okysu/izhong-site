@@ -3,17 +3,30 @@ import { title } from "@/components/primitives";
 import MasonryLayout from "../masonry";
 import ImagePreview from "@/components/preview";
 
-function ImageGallery() {
+const shuffleArray = (array: number[]) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
+const ImageGallery = () => {
   const maxIndex = 184;
+  const imageIndices = Array.from(
+    { length: maxIndex },
+    (_, index) => index + 1
+  );
+  const randomImageIndices = shuffleArray(imageIndices);
 
   return (
     <MasonryLayout>
-      {Array.from(Array(maxIndex).keys()).map((index) => (
-        <ImagePreview key={index} src={`./images/${index + 1}.webp`} />
+      {randomImageIndices.map((index) => (
+        <ImagePreview key={index} src={`./images/${index}.webp`} />
       ))}
     </MasonryLayout>
   );
-}
+};
 
 export default function ImagesPage() {
   return (
