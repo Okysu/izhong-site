@@ -12,10 +12,7 @@ import RandomMessage from "@/components/random-message";
 export default function Home() {
   return (
     <>
-      <BackgroundVideo
-        src="./video/home_v.mp4"
-        mobile="./video/home_v_m.mp4"
-      />
+      <BackgroundVideo src="./video/home_v.mp4" mobile="./video/home_v_m.mp4" />
       <div className="max-w-7xl mx-auto pt-36 px-6 mx-a">
         <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
           <div className="inline-block max-w-lg text-center justify-center z-10">
@@ -67,6 +64,11 @@ export default function Home() {
               </span>
             </Snippet>
           </div>
+
+          {/* TODO：Player */}
+          {/* <div className="mt-8 z-10">
+            <Player />
+          </div> */}
         </section>
       </div>
     </>
