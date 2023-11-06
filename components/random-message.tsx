@@ -27,7 +27,11 @@ const RandomMessage = () => {
     
   }, []);
 
-  return msg;
+  return (
+    <span className="text-foreground/90 text-small">
+      {msg}
+    </span>
+  )
 };
 
 export default RandomMessage;
