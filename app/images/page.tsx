@@ -1,3 +1,5 @@
+"use client"
+
 import { title } from "@/components/primitives";
 
 import MasonryLayout from "../masonry";
