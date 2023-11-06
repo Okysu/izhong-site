@@ -7,3 +7,24 @@
   object-fit: cover;
   z-index: 0;
 }
+
+.muteButton{
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s;
+  font-size: 14px;
+}
+
+.muteButton:hover{
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}

@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { useEffect, useRef, useState } from "react";
 import styles from "@/styles/home-video.module.css";
@@ -11,6 +11,7 @@ interface BackgroundVideoProps {
 
 const BackgroundVideo: React.FC<BackgroundVideoProps> = ({ src, mobile }) => {
   const [video, setVideo] = useState(src);
+  const [muted, setMuted] = useState(true); 
   const ref = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -44,10 +45,19 @@ const BackgroundVideo: React.FC<BackgroundVideoProps> = ({ src, mobile }) => {
     };
   }, []);
 
+  const toggleMute = () => {
+    setMuted(!muted);
+  };
+
   return (
-    <video ref={ref} className={styles.video} autoPlay muted loop>
-      <source src={video} type="video/mp4" />
-    </video>
+    <>
+      <video ref={ref} className={styles.video} autoPlay muted={muted} loop>
+        <source src={video} type="video/mp4" />
+      </video>
+      <button className={styles.muteButton} onClick={toggleMute}>
+        {muted ? "取消静音" : "使用静音"}
+      </button>
+    </>
   );
 };
 
