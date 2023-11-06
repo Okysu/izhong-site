@@ -11,16 +11,10 @@ import BackgroundVideo from "./video";
 export default function Home() {
   return (
     <>
-      <BackgroundVideo small>
-        <video className="home-page" autoPlay muted loop id="home_video">
-          <source src="./video/home_v.webm" type="video/webm" />
-        </video>
-      </BackgroundVideo>
-      <BackgroundVideo small={false}>
-        <video className="home-page" autoPlay muted loop id="home_video">
-          <source src="./video/home_v_m.webm" type="video/webm" />
-        </video>
-      </BackgroundVideo>
+      <BackgroundVideo
+        src="./video/home_v.webm"
+        mobile="./video/home_v_m.webm"
+      />
       <div className="max-w-7xl mx-auto pt-36 px-6 mx-a">
         <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
           <div className="inline-block max-w-lg text-center justify-center z-10">
