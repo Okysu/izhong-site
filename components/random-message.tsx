@@ -5,7 +5,7 @@ const RandomMessage = () => {
   const [msg, setMsg] = useState("正在祈祷中...OMG!");
 
   const getMsg = async () => {
-    const message = await fetch("/api/message");
+    const message = await fetch("/api/message?t=" + Date.now());
     const data = await message.json();
     return data.data;
   };

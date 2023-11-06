@@ -29,7 +29,8 @@ interface Comment {
 export async function GET() {
   try {
     const count = await fetch(
-      "https://waline.zcy.zone/api/comment?type=count&path=record"
+      "https://waline.zcy.zone/api/comment?type=count&path=record&t=" +
+        Date.now()
     );
     const data = (await count.json()) as Response;
 
@@ -38,7 +39,10 @@ export async function GET() {
     let random = Math.floor(Math.random() * page) + 1;
 
     const message = await fetch(
-      "https://waline.zcy.zone/api/comment?path=record&page=" + random
+      "https://waline.zcy.zone/api/comment?path=record&page=" +
+        random +
+        "&t=" +
+        Date.now()
     );
 
     const messageData = (await message.json()) as Response;
