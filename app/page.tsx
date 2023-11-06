@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <>
       <BackgroundVideo
-        src="./video/home_v.webm"
-        mobile="./video/home_v_m.webm"
+        src="./video/home_v.mp4"
+        mobile="./video/home_v_m.mp4"
       />
       <div className="max-w-7xl mx-auto pt-36 px-6 mx-a">
         <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">

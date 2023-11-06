@@ -46,7 +46,7 @@ const BackgroundVideo: React.FC<BackgroundVideoProps> = ({ src, mobile }) => {
 
   return (
     <video ref={ref} className={styles.video} autoPlay muted loop>
-      <source src={video} type="video/webm" />
+      <source src={video} type="video/mp4" />
     </video>
   );
 };
