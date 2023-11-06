@@ -36,6 +36,12 @@ const BackgroundVideo: React.FC<BackgroundVideoProps> = ({ src, mobile }) => {
     window.addEventListener("resize", () => {
       debounce(handleResize, 200)();
     });
+
+    return () => {
+      window.removeEventListener("resize", () => {
+        debounce(handleResize, 200)();
+      });
+    };
   }, []);
 
   return (
