@@ -7,6 +7,7 @@ import { siteConfig } from "@/config/site";
 import { title } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import BackgroundVideo from "./video";
+import RandomMessage from "@/components/random-message";
 
 export default function Home() {
   return (
@@ -52,7 +53,7 @@ export default function Home() {
           <div className="mt-8 z-10">
             <Snippet
               style={{
-                maxWidth: "300px",
+                maxWidth: "400px",
               }}
               hideSymbol
               hideCopyButton
@@ -60,9 +61,9 @@ export default function Home() {
               className="text-center"
             >
               <span style={{ whiteSpace: "pre-wrap" }} className="text-white">
-                在一个人下定决心做某件事的那一瞬间，上苍也开始行动了。制造各式各样对其有利的意外事件、偶遇及物质援助，这是连他本人都意想不到的。
+                <RandomMessage />
                 <br />
-                <Code color="primary">菲尔·施图茨《自愈》</Code>
+                <Code color="primary">来自大家的留言</Code>
               </span>
             </Snippet>
           </div>
