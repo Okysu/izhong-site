@@ -9,7 +9,7 @@
 }
 
 .muteButton{
-  position: absolute;
+  position: fixed;
   top: 80px;
   right: 10px;
   z-index: 1;
