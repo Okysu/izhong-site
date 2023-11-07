@@ -12,7 +12,15 @@ export const siteConfig = {
     {
       label: "留言板",
       href: "/message",
-    }
+    },
+		{
+			label: "钟姐BGM",
+			href: "/music",
+		},
+		{
+			label: "更新日志",
+			href: "/log",
+		}
 	],
 	links: {
 		github: "https://github.com/Okysu/izhong-site",
