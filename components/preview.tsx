@@ -62,7 +62,7 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({ src }) => {
         onClick={openPreview}
         isZoomed
         loading="lazy"
-        style={{ width: "100%", height: "200px" }}
+        style={{ width: "100%", height: "120px" }}
       />
       {isOpen && (
         <div className={styles.previewWrapper} onClick={closePreview}>
