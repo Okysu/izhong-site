@@ -19,6 +19,7 @@
     "@nextui-org/input": "2.1.6",
     "@nextui-org/kbd": "2.0.17",
     "@nextui-org/link": "2.0.19",
+    "@nextui-org/listbox": "^2.1.13",
     "@nextui-org/navbar": "2.0.19",
     "@nextui-org/snippet": "2.0.22",
     "@nextui-org/switch": "2.0.18",

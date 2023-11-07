@@ -8,12 +8,13 @@ import { title } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import BackgroundVideo from "./video";
 import RandomMessage from "@/components/random-message";
+import Player from "@/components/player";
 
 export default function Home() {
   return (
     <>
       <BackgroundVideo src="./video/home_v.mp4" mobile="./video/home_v_m.mp4" />
-      <div className="max-w-7xl mx-auto pt-36 px-6 mx-a">
+      <div className="max-w-7xl mx-auto pt-36 px-6">
         <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
           <div className="inline-block max-w-lg text-center justify-center z-10">
             <h1 className={title() + " text-white"}>战斗天使&nbsp;</h1>
@@ -47,7 +48,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-8 z-10">
+          <div className="mt-1 z-10">
             <Snippet
               style={{
                 maxWidth: "400px",
@@ -65,10 +66,15 @@ export default function Home() {
             </Snippet>
           </div>
 
-          {/* TODO：Player */}
-          {/* <div className="mt-8 z-10">
-            <Player />
-          </div> */}
+          <div className="mt-1 z-10">
+            <Player
+              source={{
+                name: "我只能离开",
+                singer: "颜人中",
+                src: "./music/wznlk.m4a",
+              }}
+            />
+          </div>
         </section>
       </div>
     </>
