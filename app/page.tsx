@@ -8,7 +8,7 @@ import { title } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import BackgroundVideo from "./video";
 import RandomMessage from "@/components/random-message";
-import Player from "@/components/player";
+// import Player from "@/components/player";
 
 export default function Home() {
   return (
@@ -66,7 +66,7 @@ export default function Home() {
             </Snippet>
           </div>
 
-          <div className="mt-1 z-10">
+          {/* <div className="mt-1 z-10">
             <Player
               source={{
                 name: "我只能离开",
@@ -74,7 +74,7 @@ export default function Home() {
                 src: "./music/wznlk.m4a",
               }}
             />
-          </div>
+          </div> */}
         </section>
       </div>
     </>
