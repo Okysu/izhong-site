@@ -52,7 +52,7 @@ const BackgroundVideo: React.FC<BackgroundVideoProps> = ({ src, mobile }) => {
   return (
     <>
       <video ref={ref} className={styles.video} autoPlay muted={muted} loop>
-        <source src={video} type="video/mp4" />
+        <source src={video} type="video/webm" />
       </video>
       <button className={styles.muteButton} onClick={toggleMute}>
         {muted ? "取消静音" : "使用静音"}
