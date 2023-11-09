@@ -4,7 +4,7 @@ interface Image {
 }
 
 const getImagesList = async () => {
-  const res = await fetch("http://source.zcy.zone/images.json");
+  const res = await fetch("https://source.zcy.zone/images.json");
   return await res.json() as Image[];
 };
 
