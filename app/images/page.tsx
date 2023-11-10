@@ -7,6 +7,7 @@ import ImagePreview from "@/components/preview";
 import { Pagination } from "@nextui-org/pagination";
 import { getImagesList, cutImagesPage } from "./images";
 import { useEffect, useState } from "react";
+import { Spinner } from "@nextui-org/spinner";
 
 interface Image {
   src: string;
@@ -32,28 +33,38 @@ export default function ImagesPage() {
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const pageSize = 50;
 
   useEffect(() => {
-    getImagesList().then((images) => {
-      setTotal(images.length);
-      setImages(cutImagesPage(images, page, pageSize));
+    setIsLoading(true);
+    getImagesList().then((res) => {
+      setTotal(res.length);
+      const images = cutImagesPage(res, page, pageSize);
+      setImages(images);
+      setIsLoading(false);
     });
   }, [page]);
 
   const handleChange = (page: number) => {
     setPage(page);
   };
-
   return (
     <>
       <div>
         <h2 className={title({ size: "sm" })}>瀑布流</h2>
       </div>
       <div className="mt-2">
-        <ImageGallery images={images} />
+        {isLoading ? (
+          <div className="flex justify-center">
+            <Spinner />
+          </div>
+        ) : (
+          <ImageGallery images={images} />
+        )}
       </div>
-      {/* 水平居中固定底部 */}
+
       <div className="mt-4 flex justify-center">
         <Pagination
           showControls

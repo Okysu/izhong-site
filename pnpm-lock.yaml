@@ -38,6 +38,9 @@ dependencies:
   '@nextui-org/snippet':
     specifier: 2.0.22
     version: 2.0.22(framer-motion@10.16.4)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
+  '@nextui-org/spinner':
+    specifier: ^2.0.24
+    version: 2.0.24(@nextui-org/theme@2.1.10)(react-dom@18.2.0)(react@18.2.0)(tailwind-variants@0.1.18)
   '@nextui-org/switch':
     specifier: 2.0.18
     version: 2.0.18(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
@@ -833,6 +836,23 @@ packages:
       - tailwindcss
     dev: false
 
+  /@nextui-org/spinner@2.0.24(@nextui-org/theme@2.1.10)(react-dom@18.2.0)(react@18.2.0)(tailwind-variants@0.1.18):
+    resolution: {integrity: sha512-s/q2FmxGPNEqA0ifWfc7xgs5a5D9c3xKkxL3n7jDoRnWo0NPlRsa6QRJGiSL5dHNoUqspRf/lNw2V94Bxk86Pg==}
+    peerDependencies:
+      '@nextui-org/theme': '>=2.1.0'
+      react: '>=18'
+      react-dom: '>=18'
+    dependencies:
+      '@nextui-org/react-utils': 2.0.10(react@18.2.0)
+      '@nextui-org/shared-utils': 2.0.4(react@18.2.0)
+      '@nextui-org/system-rsc': 2.0.11(@nextui-org/theme@2.1.10)(react@18.2.0)(tailwind-variants@0.1.18)
+      '@nextui-org/theme': 2.1.10(tailwindcss@3.3.3)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - tailwind-variants
+    dev: false
+
   /@nextui-org/switch@2.0.18(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3):
     resolution: {integrity: sha512-oqyaVBUgx3jBgIcFCGhPE9YKfZVqY/NSaWNvwyj7d4k8kr/cBkhZRkD+XN/DXcxXk/QPqJuyXSCg3IpnezUgHw==}
     peerDependencies:
@@ -853,6 +873,19 @@ packages:
     transitivePeerDependencies:
       - react-dom
       - tailwindcss
+    dev: false
+
+  /@nextui-org/system-rsc@2.0.11(@nextui-org/theme@2.1.10)(react@18.2.0)(tailwind-variants@0.1.18):
+    resolution: {integrity: sha512-1QqZ+GM7Ii0rsfSHXS6BBjzKOoLIWwb72nm4h4WgjlMXbRKLZcCQasRHVe5HMSBMvN0JUo7qyGExchfDFl/Ubw==}
+    peerDependencies:
+      '@nextui-org/theme': '>=2.1.0'
+      react: '>=18'
+      tailwind-variants: '>=0.1.13'
+    dependencies:
+      '@nextui-org/theme': 2.1.10(tailwindcss@3.3.3)
+      clsx: 1.2.1
+      react: 18.2.0
+      tailwind-variants: 0.1.18(tailwindcss@3.3.3)
     dev: false
 
   /@nextui-org/system-rsc@2.0.4(react@18.2.0)(tailwindcss@3.3.3):
