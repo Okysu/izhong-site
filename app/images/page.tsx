@@ -64,8 +64,8 @@ export default function ImagesPage() {
           <ImageGallery images={images} />
         )}
       </div>
-
-      <div className="mt-4 flex justify-center">
+          {/* 最大90%宽度 */}
+      <div className="mt-4 max-w-[90%] mx-auto">
         <Pagination
           showControls
           total={Math.ceil(total / pageSize)}
