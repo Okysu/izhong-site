@@ -14,8 +14,12 @@ export const siteConfig = {
       href: "/message",
     },
 		{
-			label: "钟姐BGM",
+			label: "音乐",
 			href: "/music",
+		},
+		{
+			label: "展台",
+			href: "/gallery",
 		},
 		{
 			label: "更新日志",

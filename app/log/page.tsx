@@ -41,6 +41,14 @@ const changeLog = [
       "说明：瀑布流因为新增分页（目前每页50张）功能，回退为固定顺序呈现。",
     ],
   },
+  {
+    date: "2023-11-21",
+    content: [
+      "优化：瀑布流移除懒加载，这点流量不省咯。",
+      "调整：资源站点(source.zcy.zone)因不少友友反馈无法访问，暂时添加一下Cloudflare代理，看看效果。",
+      "新增：展台页面，用来展示友友们的作品。",
+    ],
+  },
 ].reverse();
 
 export default function LogPage() {
